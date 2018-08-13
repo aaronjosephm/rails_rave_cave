@@ -1,19 +1,34 @@
 class BookingsController < ApplicationController
-  def received
-  end
 
-  def sent
-  end
+ # received bookings are the bookings that the creator of the warehouse receive
+ def received
+ end
 
-  def warehouse_bookings_index
-  end
+ def sent
+   @user = User.find(params[:user_id])
+   @bookings = @user.bookings
+ end
 
-  def new
-  end
+ def warehouse_bookings_index
+   @bookings = Booking.all
+ end
 
-  def create
-  end
+ def new
+   @bookings = Booking.new
+ end
 
-  def destroy
-  end
+ def create
+   @booking = Booking.new(booking_params)
+   @booking.user = User.find(params[:user_id])
+   @booking.warehouse = Warehouse.find(params[:warehouse_id])
+   if @booking.save
+     redirect_to booking_path(@booking)
+   else
+     render :new
+ end
+
+ def destroy
+   @booking.destroy
+   redirect_to bookings_path
+ end
 end
