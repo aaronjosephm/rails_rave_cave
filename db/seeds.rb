@@ -1,3 +1,4 @@
+
 require "date"
 
 Booking.destroy_all if Rails.env.development?
@@ -51,6 +52,3 @@ booking2.warehouse = tribeca
 booking2.save
 
 
-
-
-#crete user instance, warehouse instance, booking instance

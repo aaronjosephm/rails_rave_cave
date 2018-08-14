@@ -1,7 +1,12 @@
 <h1>Create a new warehouse</h1>
-<%= simple_form_for(@warehouse) do |f| %>
-   <%= f.input :name %>
-   <%= f.input :photo %>
-   <%= f.input :description %>
-   <%= f.submit "submit", class: "btn btn-primary" %>
- <% end %>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 offset-md-4">
+    <%= simple_form_for(@warehouse) do |f| %>
+       <%= f.input :name %>
+       <%= f.input :photo %>
+       <%= f.input :description %>
+       <%= f.submit "submit", class: "btn btn-primary" %>
+     <% end %>
+   </div>
+ </div>
