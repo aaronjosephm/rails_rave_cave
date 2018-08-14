@@ -1,1 +1,5 @@
 <h1>Create a new booking</h1>
+<%= simple_form_for([@warehouse, @booking]) do |f| %>
+  <%= f.input :date %>
+  <%= f.submit "submit", class: "btn btn-primary" %>
+<% end %>
