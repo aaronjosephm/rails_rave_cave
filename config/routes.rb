@@ -6,13 +6,11 @@ Rails.application.routes.draw do
 
   get 'bookings/sent', to: "bookings#sent"
 
+  resources :bookings, except: [ :index, :new, :create ]
+
   resources :warehouses do
     resources :bookings, only: [ :new, :create]
   end
-
-  resources :bookings, except: [ :index, :new, :create ]
-
-
 
   get 'bookings/received', to: "bookings#received"
 

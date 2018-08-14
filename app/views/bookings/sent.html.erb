@@ -1,6 +1,7 @@
 <h2>Bookings that you've made: </h2>
 <% @bookings.each do |booking| %>
-  <p><%= booking.warehouse %><p>
+  <p><%= booking.warehouse.name %><p>
+  <img src=<%= "#{booking.warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
   <p><%= booking.date %><p>
 <% end %>
 <h1><%= link_to  profile_url, method: :get do %>
