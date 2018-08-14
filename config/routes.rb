@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :warehouses
+  resources :warehouses do
+    resources :bookings, only: [ :new, :create]
+  end
 
-  resources :bookings, except: [ :index ]
+  resources :bookings, except: [ :index, :new, :create ]
 
   get 'profile', to: "users#profile"
 
