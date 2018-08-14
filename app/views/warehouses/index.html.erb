@@ -1,4 +1,6 @@
 <h1>All warehouses</h1>
 <% @warehouses.each do |warehouse| %>
-<%= warehouse.name %>
+  <%= warehouse.name %>
+  <img src=<%= "#{warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+  <p><%= link_to "details", warehouse_url(warehouse), method: :get%><p>
 <% end %>

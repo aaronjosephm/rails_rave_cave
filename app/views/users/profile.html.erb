@@ -1,7 +1,7 @@
 <h1> Here's your profile!</h1>
 <h2>Your warehouses: </h2>
 <% @warehouses.each do |warehouse| %>
-  <p><%= warehouse.name %></p>
+  <p><%= link_to warehouse.name, warehouse_url(warehouse), method: :get%><p>
 <% end %>
 
 <h2><%= link_to "View your bookings", bookings_sent_url, method: :get%></h2>

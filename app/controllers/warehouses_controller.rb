@@ -1,6 +1,7 @@
 class WarehousesController < ApplicationController
   def index
     @warehouses = Warehouse.all
+
   end
 
   def show
@@ -13,10 +14,11 @@ class WarehousesController < ApplicationController
 
   def create
     @warehouse = Warehouse.new(warehouse_params)
-
+    @warehouse.user_id = current_user[:id]
     if @warehouse.save
-      redirect_to warehouses_path
+      redirect_to profile_url
     else
+
       render :new
     end
   end
@@ -36,6 +38,6 @@ class WarehousesController < ApplicationController
   end
 
   def warehouse_params
-    params.require(:warehouse).permit(:name, :photo, :description, :user_id)
+    params.require(:warehouse).permit(:name, :photo, :description)
   end
 end

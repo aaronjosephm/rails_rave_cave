@@ -1,0 +1,6 @@
+<h1><%= @warehouse.name %></h1>
+<img src=<%= "#{@warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+<h1><%= link_to  profile_url, method: :get do %>
+  <i class="fas fa-hand-point-left"></i>
+<% end %></h1>
+<h2>make a booking:</h2>
