@@ -1,11 +1,18 @@
-<h1><%= @warehouse.name %></h1>
-<img src=<%= "#{@warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
 
-<h2>current bookings:</h2>
-<% @warehouse.bookings.each do |booking| %>
-  <%= booking.user.email %>
-  <%= booking.date %>
-<% end %>
+<div class="user-warehouse-card">
+  <h1><%= @warehouse.name %></h1>
+  <img src=<%= "#{@warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+
+  <h2>current bookings:</h2>
+  <% @warehouse.bookings.each do |booking| %>
+    <%= booking.user.email %>
+    <%= booking.date %>
+  <% end %>
+</div>
+
+<h1><%= link_to  new_warehouse_booking_url(@warehouse), method: :get do %>
+  <i class="fas fa-plus"></i>
+<% end %></h1>
 
 
 <h1><%= link_to  profile_url, method: :get do %>

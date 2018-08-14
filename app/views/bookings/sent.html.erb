@@ -1,8 +1,11 @@
 <h2>Bookings that you've made: </h2>
 <% @bookings.each do |booking| %>
-  <p><%= booking.warehouse.name %><p>
-  <img src=<%= "#{booking.warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
-  <p><%= booking.date %><p>
+  <div class="booking-card">
+    <h2><%= booking.warehouse.name %></h2>
+    <img src=<%= "#{booking.warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+    <p> Date booked: </p>
+    <p><%= booking.date %></p>
+  </div>
 <% end %>
 <h1><%= link_to  profile_url, method: :get do %>
   <i class="fas fa-hand-point-left"></i>
