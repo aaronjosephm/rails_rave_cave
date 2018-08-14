@@ -4,13 +4,10 @@
   <p><%= warehouse.name %></p>
 <% end %>
 
-<h2>Your bookings: </h2>
-<% @bookings.each do |booking| %>
-  <p><%= booking.date %><p>
-<% end %>
+<h2><%= link_to "View your bookings", bookings_sent_url, method: :get%></h2>
 
 <h2>Create new warehouse</h2>
 <p><%= link_to "create new warehouse", new_warehouse_url, method: :get%></p>
 
-<h2>Create new booking</h2>
 
+<h2>book a warehouse</h2>
