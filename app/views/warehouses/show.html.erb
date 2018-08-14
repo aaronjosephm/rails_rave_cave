@@ -8,11 +8,12 @@
     <%= booking.user.email %>
     <%= booking.date %>
   <% end %>
-</div>
-
-<h1><%= link_to  new_warehouse_booking_url(@warehouse), method: :get do %>
+  <h1>Add new booking <%= link_to new_warehouse_booking_url(@warehouse), method: :get do %>
   <i class="fas fa-plus"></i>
 <% end %></h1>
+
+</div>
+
 
 
 <h1><%= link_to  profile_url, method: :get do %>
