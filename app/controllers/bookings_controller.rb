@@ -4,8 +4,12 @@ class BookingsController < ApplicationController
  def received
  end
 
+ def show
+   @booking = Booking.find(params[:id])
+ end
+
  def sent
-   @user = User.find(params[:user_id])
+   @user = current_user
    @bookings = @user.bookings
  end
 
