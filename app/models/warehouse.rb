@@ -5,5 +5,5 @@ class Warehouse < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :photo, presence: true
   validates :description, presence: true
-  validates :user_id, presence: true, uniqueness: true
+  validates :user_id, presence: true
 end
