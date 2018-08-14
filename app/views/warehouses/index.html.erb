@@ -1,4 +1,13 @@
-<h1>Your Warehouses</h1>
+<h1>All warehouses</h1>
 <% @warehouses.each do |warehouse| %>
-<%= warehouse.name %>
+  <%= warehouse.name %>
+  <img src=<%= "#{warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+  <% if current_user.warehouses.include?(warehouse) %>
+    <p>Already booked</p>
+  <% else %>
+    <p><%= link_to "create booking", warehouse_url(warehouse), method: :get%><p>
+  <% end %>
 <% end %>
+<h1><%= link_to  profile_url, method: :get do %>
+  <i class="fas fa-hand-point-left"></i>
+<% end %></h1>

@@ -1,12 +1,14 @@
 <h1> Here's your profile!</h1>
 <h2>Your warehouses: </h2>
 <% @warehouses.each do |warehouse| %>
-  <p><%= warehouse.name %></p>
+  <p><%= link_to warehouse.name, warehouse_url(warehouse), method: :get%><p>
 <% end %>
 
 <h2><%= link_to "View your bookings", bookings_sent_url, method: :get%></h2>
 
-<h2>Create new warehouse</h2>
+<h2>Create new warehouse:</h2>
 <p><%= link_to "create new warehouse", new_warehouse_url, method: :get%></p>
 
-<h2>book a warehouse</h2>
+
+<h2><%= link_to "book a warehouse", warehouses_url, method: :get%></h2>
+
