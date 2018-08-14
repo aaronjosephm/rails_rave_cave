@@ -1,0 +1,8 @@
+<h2>Bookings that you've made: </h2>
+<% @bookings.each do |booking| %>
+  <p><%= booking.warehouse %><p>
+  <p><%= booking.date %><p>
+<% end %>
+<h1><%= link_to  profile_url, method: :get do %>
+  <i class="fas fa-hand-point-left"></i>
+<% end %></h1>
