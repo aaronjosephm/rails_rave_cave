@@ -35,7 +35,7 @@ class WarehousesController < ApplicationController
   def destroy
     @warehouse = Warehouse.find(params[:id])
     @warehouse.destroy
-    redirect_to warehouses_path
+    redirect_to profile_path
   end
 
   def warehouse_params
