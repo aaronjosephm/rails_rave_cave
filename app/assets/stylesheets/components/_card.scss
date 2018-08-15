@@ -60,26 +60,41 @@
 
 .card {
   background-image: black;
-  display: initial !important;
   flex: auto;
   flex-box: center;
   flex-direction: column;
   justify-content: space-between;
   text-align: center !important;
-  width: 50vh;
-  height: 50vh;
   margin-bottom: 10vh !important;
-  color: white;
+  color: black;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
 }
 
-.card i {
+.card-footer {
   color: black;
+}
+
+.card:hover {
+  opacity: 0.8;
+  background-color: black;
+  z-index: 5;
+  color: white;
+}
+
+.card:hover .card-footer {
+  opacity: 0.8;
+  background-color: black;
+  z-index: 5;
+  color: white;
+}
+
+.card i {
+  color: blue;
 }
 
 
 .card-body {
-  height: 300px;
+  height: 50vh;
   background-size: cover;
   background-color: blue;
   color: black;
@@ -108,11 +123,7 @@
 
 /* Your card CSS code here */
 
-.card:hover {
-  opacity: 0.8;
-  background-color: black;
-  z-index: 5;
-}
+
 
 .card i:hover {
   color: white;
