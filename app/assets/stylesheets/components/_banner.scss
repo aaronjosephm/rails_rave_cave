@@ -1,5 +1,5 @@
 .warehouses-banner {
-  background-image: url(warehouse_banner.jpg);
+  background-image: asset-url("warehouse_banner.jpg");
   height: 70vh;
   display: grid;
 }
@@ -11,8 +11,7 @@
 }
 
 .profile-banner {
-  background-image: url(profile_background.jpg);
-
+  background-image: asset-url("profile_background.jpg");
   background-size: cover;
   text-align: center;
   background-repeat: no-repeat;
