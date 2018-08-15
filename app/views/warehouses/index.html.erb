@@ -1,15 +1,33 @@
-<h1>All warehouses</h1>
-<% @warehouses.each do |warehouse| %>
-  <div class="warehouse-card">
-      <%= warehouse.name %>
-      <img src=<%= "#{warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
-      <% if current_user.warehouses.include?(warehouse) %>
-        <p>Already booked</p>
-      <% else %>
-        <p><%= link_to "create booking", warehouse_url(warehouse), method: :get%></p>
-      <% end %>
+<div class="warehouses-banner">
+  <h1>All warehouses</h1>
+</div>
+
+<div class="row" style="margin-top: 10vh; margin-left: 5vw; margin-right: 5vw;">
+  <% @warehouses.each do |warehouse| %>
+
+    <div class="col-md-4" style="text-align: center; display: flex;">
+
+      <div class="card" >
+        <%= link_to warehouse_url(warehouse) do %>
+          <div class="card-body" style="background-image: url(<%= "#{warehouse.photo}" %>);">
+
+            <% if current_user.bookings.find { |booking| booking[:warehouse_id] == warehouse.id } %>
+
+            <% else %>
+
+            <% end %>
+          </div>
+          <div class="card-footer">
+            <h1><%= warehouse.name %></h1>
+          </div>
+        <% end %>
+      </div>
+
     </div>
-    <% end %>
-<h1><%= link_to  profile_url, method: :get do %>
-  <i class="fas fa-hand-point-left"></i>
-<% end %></h1>
+  <% end %>
+</div>
+<%= link_to  profile_url, method: :get do %>
+  <h1><i class="fas fa-hand-point-left"></i></h1>
+<% end %>
+
+

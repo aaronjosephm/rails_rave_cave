@@ -1,11 +1,35 @@
-// .banner {
-//   color: white;
-//   text-align: center;
-//   height: 120vh;
-//   /* if you have a 70px navbar => height: calc(100vh - 70px); */
-//   background-size: 100%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   position: relative;
-// }
+.warehouses-banner {
+  background-image: url(warehouse_banner.jpg);
+  height: 70vh;
+  display: grid;
+}
+
+.warehouses-banner h1 {
+  text-align: center;
+  color: white;
+  padding-top: 20vh;
+}
+
+.profile-banner {
+  background-image: url(profile_background.jpg);
+
+  background-size: cover;
+  text-align: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
+  color: white;
+  height: 70vh;
+  padding-top: 20vh;
+}
+
+.profile-banner h1 {
+  opacity: 0.8;
+}
+
+.show-warehouse-banner {
+  text-align: center;
+  color: white;
+  height: 65vh;
+  display: grid;
+}
