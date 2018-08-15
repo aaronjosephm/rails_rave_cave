@@ -1,6 +1,6 @@
 
-<div class="show-warehouse-banner" style="background-image: url(<%= "#{@warehouse.photo}" %>);">
-
+<div class="show-warehouse-banner">
+  <img src=<%= "#{@warehouse.photo}" %> style="width: 100vw; height: auto;">
  <!--  <h2>current bookings:</h2>
   <% @warehouse.bookings.each do |booking| %>
     <%= booking.user.email %>
