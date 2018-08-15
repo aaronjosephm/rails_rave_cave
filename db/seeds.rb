@@ -11,7 +11,7 @@ caroline = User.create(email: "scottish@yahoo.com", password: "braveheart")
 
 turkey = Warehouse.new(name: "Hairy Addiction",
                         description: "Raki All Day Long",
-                        photo: "https://www.residentadvisor.net/images/events/flyer/2017/5/uk-0519-961187-front.jpg"
+                        photo: "https://d31fr2pwly4c4s.cloudfront.net/7/5/7/938101_0_warehouseraves_400.jpg"
                         )
 
 turkey.user = caroline
