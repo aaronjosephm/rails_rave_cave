@@ -5,6 +5,7 @@
     <img src=<%= "#{booking.warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
     <p> Date booked: </p>
     <p><%= booking.date %></p>
+    <h1><%= link_to "Delete", booking_path(booking), method: :delete, class: "btn-delete" %></h1>
   </div>
 <% end %>
 <h1><%= link_to  profile_url, method: :get do %>

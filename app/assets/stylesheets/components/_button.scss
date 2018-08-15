@@ -42,3 +42,12 @@
     opacity: 0.8;
     transition: all 0.3s ease 0s;
 }
+
+.btn-delete {
+  padding: 12px 30px;
+  background-color: red;
+  color: white;
+  -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
