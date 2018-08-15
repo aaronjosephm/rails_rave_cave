@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <h1>Edit <%= @warehouse.name %></h1>
+    <%= simple_form_for(@warehouse) do |f| %>
+       <%= f.input :name %>
+       <%= f.input :photo %>
+       <%= f.input :description %>
+       <%= f.submit "submit", class: "btn btn-primary" %>
+     <% end %>
+   </div>
+ </div>
