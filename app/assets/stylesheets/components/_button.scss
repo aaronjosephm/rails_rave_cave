@@ -22,3 +22,23 @@
   opacity: 0.8;
   transition: all 0.3s ease 0s;
 }
+
+.btn-profile-option {
+    padding: 15px 35px;
+    font-size: 25px; //change this to your desired size
+    line-height: normal;
+    background-color: gray;
+    width: 20vw;
+    color: black;
+    vertical-align: center;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
+
+.btn-profile-option:hover {
+    background-color: black;
+    color: white;
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
+}
