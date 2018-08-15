@@ -72,7 +72,7 @@ snow = Warehouse.new(name: "Eternal Snow",
                         )
 
 snow.user = caroline
-tribeca.save
+snow.save
 
 scottish = Warehouse.new(name: "Braveheart!!!!",
                         description: "Freeeeedom - Only Kilts and pissed off Scots Allowed",
@@ -100,7 +100,7 @@ booking1.save
 
 booking2 = Booking.new(date: Date.tomorrow)
 booking2.user = caroline
-booking2.warehouse = tribeca
+booking2.warehouse = snow
 booking2.save
 
 
