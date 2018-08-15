@@ -24,7 +24,12 @@ class WarehousesController < ApplicationController
     end
   end
 
+  def edit
+    @warehouse = Warehouse.find(params[:id])
+  end
+
   def update
+    @warehouse = Warehouse.find(params[:id])
     if @warehouse.update(warehouse_params)
       redirect_to warehouse_path(@warehouse)
     else

@@ -9,7 +9,8 @@
         <th scope="col">#</th>
         <th scope="col">Name</th>
         <th scope="col">Description</th>
-        <th scope="col">Photo</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Edit</th>
       </tr>
     </thead>
     <tbody>
@@ -18,7 +19,12 @@
           <th scope="row">1</th>
           <td> <%= link_to warehouse.name, warehouse_url(warehouse), method: :get%></td>
           <td><%= link_to warehouse.description, warehouse_url(warehouse), method: :get%></td>
-          <td><%= link_to "Delete", warehouse_url(warehouse), method: :delete, class: "btn-delete" %></td>
+          <td><%= link_to warehouse_url(warehouse), method: :delete do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %></td>
+          <td><%= link_to edit_warehouse_url(warehouse), method: :get do %>
+              <i class="fas fa-edit"></i>
+            <% end %></td>
         </tr>
       <% end %>
     </tbody>
