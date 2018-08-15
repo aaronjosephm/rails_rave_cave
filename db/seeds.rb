@@ -17,17 +17,17 @@ turkey = Warehouse.new(name: "Hairy Addiction",
 turkey.user = caroline
 turkey.save
 
-turkish_bath_house = Warehouse.new(name: "turkish_bath_house",
+turkish_bath_house = Warehouse.new(name: "Tiger in the Bathroom",
                         description: "Hot, Sweaty exfoliation",
-                        photo: "https://files.slack.com/files-pri/T02NE0241-FC972CR6H/empty2.jpg"
+                        photo: "http://unikevent.ca/wp-content/uploads/2016/12/Fonderie-Darling-1170x779.jpg"
                         )
 
 turkish_bath_house.user = mark
 turkish_bath_house.save
 
-schmuck_house = Warehouse.new(name: "schmuck_house",
+schmuck_house = Warehouse.new(name: "Schmuck house",
                         description: "Stomping the Glass All Day Long",
-                        photo: "https://files.slack.com/files-pri/T02NE0241-FC8QUSSEQ/architecture-building-business-236698.jpg"
+                        photo: "https://martell-production.s3.amazonaws.com/uploads/uploaded_file/filename/272549/large_Warehouse_To-let___32_Montreal_Drive___Airport_City__Cape_Town____1_.JPG"
                         )
 
 schmuck_house.user = caroline
@@ -35,35 +35,35 @@ schmuck_house.save
 
 mile_end = Warehouse.new(name: "Falafel Sweetness",
                        description: "Fine Tuned Pump Action",
-                       photo: "https://files.slack.com/files-pri/T02NE0241-FC8U0F23D/architecture-building-business-236709.jpg"
+                       photo: "https://cdn.decoist.com/wp-content/uploads/2015/02/Caviar-warehouse-converted-into-a-contemporary-loft-in-New-York.jpg"
                        )
 
 mile_end.user = mark
 mile_end.save
 
-old_port = Warehouse.new(name: "USA Bro's",
-                         description: "Budweiser all day long",
-                         photo: "https://files.slack.com/files-pri/T02NE0241-FC8U0F23D/architecture-building-business-236709.jpg"
+under_table_stool = Warehouse.new(name: "Under table stool",
+                         description: "Yeh you know the drill",
+                         photo: "http://www.real-estate-vietnam.com/images/bien607/p1.jpg"
                         )
 
-old_port.user = caroline
-old_port.save
+under_table_stool.user = caroline
+under_table_stool.save
 
 scotish_cave = Warehouse.new(name: "Radical",
                              description: "Feel the Berne",
-                             photo: "https://files.slack.com/files-pri/T02NE0241-FC8G0RN8H/chemiewerk_ru__dersdorf_abandoned_chemical_factory_berlin-007.jpg"
+                             photo: "http://www.real-estate-vietnam.com/images/bien607/p1.jpg"
                              )
 scotish_cave.user = caroline
 scotish_cave.save
 
 
-tribeca = Warehouse.new(name: "Crack House",
+crack_house = Warehouse.new(name: "Crack House",
                         description: "No Drugs Allowed",
                         photo: "http://www.real-estate-vietnam.com/images/bien607/p1.jpg"
                         )
 
-tribeca.user = mark
-tribeca.save
+crack_house.user = mark
+crack_house.save
 
 
 snow = Warehouse.new(name: "Eternal Snow",
@@ -102,5 +102,8 @@ booking2 = Booking.new(date: Date.tomorrow)
 booking2.user = caroline
 booking2.warehouse = tribeca
 booking2.save
+
+
+
 
 
