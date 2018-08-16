@@ -2,17 +2,17 @@
   <h1 style="font-size: 80px;"> Welcome <%= current_user.email.split("@")[0] %>!</h1>
 </div>
 <div class="container">
-  <div class="look-at-all-those-buttons" style="justify-content: space-around;">
+  <div class="look-at-all-those-buttons" >
 
-    <%= link_to "View my bookings", bookings_sent_url, method: :get, class: "btn-profile-option" %>
-
-
-    <%= link_to "Post warehouse", new_warehouse_url, method: :get, class: "btn-profile-option" %>
+    <%= link_to "My bookings", bookings_sent_url, method: :get %>
 
 
-    <%= link_to "Book a warehouse", warehouses_url, method: :get, class: "btn-profile-option" %>
+    <%= link_to " List warehouse", new_warehouse_url, method: :get %>
 
-    <%= link_to "My Listings", profile_warehouses_url, method: :get, class: "btn-profile-option" %>
+
+    <%= link_to " Book warehouse", warehouses_url, method: :get %>
+
+    <%= link_to " My listings", profile_warehouses_url, method: :get %>
 
 
   </div>
