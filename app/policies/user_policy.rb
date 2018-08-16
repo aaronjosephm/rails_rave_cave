@@ -16,4 +16,8 @@ class UserPolicy < ApplicationPolicy
   def profile?
     true
   end
+
+  def warehouses?
+    user == user
+  end
 end

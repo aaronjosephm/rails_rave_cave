@@ -7,13 +7,11 @@ class WarehousesController < ApplicationController
   end
 
   def show
-
     @marker =
       {
         lat: @warehouse.latitude,
         lng: @warehouse.longitude
       }
-
   end
 
   def new
