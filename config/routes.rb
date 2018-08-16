@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'profile', to: "users#profile"
 
+  get 'profile/warehouses', to: "users#warehouses"
+
   get 'bookings/sent', to: "bookings#sent"
 
   resources :bookings, except: [ :index, :new, :create ]

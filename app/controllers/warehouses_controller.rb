@@ -40,7 +40,7 @@ class WarehousesController < ApplicationController
     @warehouse = Warehouse.find(params[:id])
     authorize @warehouse
     if @warehouse.update(warehouse_params)
-      redirect_to warehouse_path(@warehouse)
+      redirect_to profile_warehouses_url
     else
       render :edit
     end
@@ -48,7 +48,7 @@ class WarehousesController < ApplicationController
 
   def destroy
     @warehouse.destroy
-    redirect_to profile_path
+    redirect_to profile_warehouses_url
   end
 
   private

@@ -38,7 +38,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to profile_path
+    redirect_to profile_warehouses_url
   end
 
   private
