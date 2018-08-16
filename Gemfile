@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.4.4'
-
+gem 'carrierwave', '~> 1.2'
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
 gem 'pg', '~> 0.21'
@@ -10,7 +10,7 @@ gem 'redis'
 gem 'devise'
 gem 'pundit'
 gem 'geocoder'
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'cloudinary'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
