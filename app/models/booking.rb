@@ -3,6 +3,7 @@ class Booking < ApplicationRecord
   belongs_to :warehouse
 
   validates :date, presence: true
+  validates :event_name, presence: true
   validates :user_id, presence: true
   validates :warehouse, presence: true
   validates :user_id, uniqueness: { scope: :warehouse_id }

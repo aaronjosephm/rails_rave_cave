@@ -3,8 +3,11 @@
   <div class="booking-card">
     <h2><%= booking.warehouse.name %></h2>
     <img src=<%= "#{booking.warehouse.photo}" %> style="height: 400px; width: auto; border-radius: 15px; align-self: center;">
+    <p><%= booking.event_name %></p>
     <p> Date booked: </p>
     <p><%= booking.date %></p>
+    <p> Price: </p>
+    <p><%= booking.price %></p>
     <% if policy(booking).destroy? %>
       <h1><%= link_to "Delete", booking_path(booking), method: :delete, class: "btn-delete" %></h1>
     <% end %>
