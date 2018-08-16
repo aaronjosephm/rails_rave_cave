@@ -5,6 +5,10 @@ class UserPolicy < ApplicationPolicy
     end
   end
 
+  def warehouses?
+    user == user
+  end
+
   def create?
     return true
   end

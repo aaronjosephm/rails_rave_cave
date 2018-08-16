@@ -1,5 +1,6 @@
 class WarehousesController < ApplicationController
   before_action :set_warehouse, only: [:show, :destroy, :edit]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @warehouses = policy_scope(Warehouse)
@@ -37,7 +38,7 @@ class WarehousesController < ApplicationController
     @warehouse = Warehouse.find(params[:id])
     authorize @warehouse
     if @warehouse.update(warehouse_params)
-      redirect_to warehouse_path(@warehouse)
+      redirect_to profile_warehouses_url
     else
       render :edit
     end
