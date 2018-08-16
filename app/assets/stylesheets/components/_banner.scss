@@ -1,7 +1,9 @@
 .warehouses-banner {
-  background-image: asset-url("warehouse_banner.jpg");
+  background-image: asset-url("warehouse10.jpg");
   height: 70vh;
   display: grid;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .warehouses-banner h1 {

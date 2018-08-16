@@ -10,16 +10,11 @@
       <div class="card" >
         <%= link_to warehouse_url(warehouse) do %>
           <div class="card-body" style="background-image: url(<%= "#{warehouse.photo}" %>);">
-
-            <% if current_user.bookings.find { |booking| booking[:warehouse_id] == warehouse.id } %>
-
-            <% else %>
-
-            <% end %>
           </div>
           <div class="card-footer">
             <h1><%= warehouse.name %></h1>
             <p><%= warehouse.description %></p>
+            <h2><%= warehouse.price %></h2>
           </div>
         <% end %>
       </div>

@@ -6,13 +6,11 @@ class WarehousesController < ApplicationController
   end
 
   def show
-
     @marker =
       {
         lat: @warehouse.latitude,
         lng: @warehouse.longitude
       }
-
   end
 
   def new
@@ -47,7 +45,7 @@ class WarehousesController < ApplicationController
 
   def destroy
     @warehouse.destroy
-    redirect_to profile_path
+    redirect_to profile_warehouses_url
   end
 
   private
