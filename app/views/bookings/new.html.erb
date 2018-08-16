@@ -2,6 +2,8 @@
 <div class="container">
   <%= simple_form_for([@warehouse, @booking]) do |f| %>
     <%= f.input :date %>
+    <%= f.input :event_name %>
+    <%= f.label :price %>
     <%= f.submit "submit", class: "btn btn-primary" %>
   <% end %>
 </div>
