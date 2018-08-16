@@ -1,5 +1,6 @@
 class WarehousesController < ApplicationController
   before_action :set_warehouse, only: [:show, :destroy, :edit]
+  skip_before_action :authenticate_user!, only: [:index]
 
   def index
     @warehouses = policy_scope(Warehouse)
