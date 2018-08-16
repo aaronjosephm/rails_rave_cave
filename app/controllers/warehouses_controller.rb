@@ -6,6 +6,13 @@ class WarehousesController < ApplicationController
   end
 
   def show
+
+    @marker =
+      {
+        lat: @warehouse.latitude,
+        lng: @warehouse.longitude
+      }
+
   end
 
   def new
@@ -46,7 +53,7 @@ class WarehousesController < ApplicationController
   private
 
   def warehouse_params
-    params.require(:warehouse).permit(:name, :photo, :description)
+    params.require(:warehouse).permit(:name, :photo, :description, :address)
   end
 
   def set_warehouse
