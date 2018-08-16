@@ -1,20 +1,21 @@
 class WarehousesController < ApplicationController
-  def index
-    @warehouses = Warehouse.all
+  before_action :set_warehouse, only: [:show, :destroy, :edit]
 
+  def index
+    @warehouses = policy_scope(Warehouse)
   end
 
   def show
-    @warehouse = Warehouse.find(params[:id])
-
   end
 
   def new
     @warehouse = Warehouse.new
+    authorize @warehouse
   end
 
   def create
     @warehouse = Warehouse.new(warehouse_params)
+    authorize @warehouse
     @warehouse.user_id = current_user[:id]
     if @warehouse.save
       redirect_to profile_url
@@ -24,7 +25,12 @@ class WarehousesController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def update
+    @warehouse = Warehouse.find(params[:id])
+    authorize @warehouse
     if @warehouse.update(warehouse_params)
       redirect_to warehouse_path(@warehouse)
     else
@@ -33,12 +39,18 @@ class WarehousesController < ApplicationController
   end
 
   def destroy
-    @warehouse = Warehouse.find(params[:id])
     @warehouse.destroy
-    redirect_to warehouses_path
+    redirect_to profile_path
   end
+
+  private
 
   def warehouse_params
     params.require(:warehouse).permit(:name, :photo, :description)
+  end
+
+  def set_warehouse
+    @warehouse = Warehouse.find(params[:id])
+    authorize @warehouse
   end
 end
