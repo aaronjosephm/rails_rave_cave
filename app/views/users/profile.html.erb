@@ -19,19 +19,33 @@
           <th scope="row">1</th>
           <td> <%= link_to warehouse.name, warehouse_url(warehouse), method: :get%></td>
           <td><%= link_to warehouse.description, warehouse_url(warehouse), method: :get%></td>
-          <td><%= link_to warehouse_url(warehouse), method: :delete do %>
+          <td>
+            <% if policy(warehouse).destroy? %>
+            <%= link_to warehouse_url(warehouse), method: :delete do %>
               <i class="fas fa-trash-alt"></i>
-            <% end %></td>
-          <td><%= link_to edit_warehouse_url(warehouse), method: :get do %>
+            <% end %>
+            <% end %>
+          </td>
+          <td>
+            <% if policy(warehouse).edit? %>
+            <%= link_to edit_warehouse_url(warehouse), method: :get do %>
               <i class="fas fa-edit"></i>
-            <% end %></td>
+            <% end %>
+            <% end %>
+          </td>
         </tr>
       <% end %>
     </tbody>
   </table>
   <div class="look-at-all-those-buttons" style="justify-content: space-around;">
+
     <%= link_to "View my bookings", bookings_sent_url, method: :get, class: "btn-profile-option" %>
+
+
     <%= link_to "Post warehouse", new_warehouse_url, method: :get, class: "btn-profile-option" %>
+
+
     <%= link_to "Book a warehouse", warehouses_url, method: :get, class: "btn-profile-option" %>
+
   </div>
 </div>
