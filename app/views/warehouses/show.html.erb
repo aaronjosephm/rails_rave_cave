@@ -10,11 +10,14 @@
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-xs-12 col-sm-6 ">
-      <div class="flex flex-column flex-align-center margin-top-5">
-        <h1><%= @warehouse.name %></h1>
-        <h2>Description: <%= @warehouse.description %></h2>
-        <h2><%= @warehouse.price %></h2>
+    <div class="col-xs-12 col-sm-6" >
+      <h1 style="text-align: center; margin-top: 10vh;"><%= @warehouse.name %></h1>
+      <div class="flex flex-column flex-align-left margin-top-5" style="margin-left: 8vh; margin-right: 8vh;">
+
+        <h1>Description:</h1>
+        <h4 style="margin-bottom: 10vh;"><%= @warehouse.description %></h4>
+        <h2>Price: <%= @warehouse.price %></h2>
+        <h2>Address: <%= @warehouse.address %></h2>
         <%= link_to "Book it!", new_warehouse_booking_url(@warehouse), method: :get, class: "btn-xlarge" %>
       </div>
     </div>
