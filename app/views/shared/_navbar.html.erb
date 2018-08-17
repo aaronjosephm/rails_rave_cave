@@ -4,7 +4,9 @@
     <%= image_tag "Untitled-4.png", height: 70 %>
   <% end %>
   <p>
+  <% if user_signed_in? == false %>
   <span id="banner-typed-text"></span>
+  <% end %>
 </p>
 
   <!-- Right Navigation -->
