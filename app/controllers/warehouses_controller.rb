@@ -13,6 +13,7 @@ class WarehousesController < ApplicationController
   end
 
   def show
+    @just_created = params[:just_created]
     @marker =
       {
         lat: @warehouse.latitude,
