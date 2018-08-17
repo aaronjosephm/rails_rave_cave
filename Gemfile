@@ -11,6 +11,7 @@ gem 'devise'
 gem 'pundit'
 gem 'geocoder'
 gem 'cloudinary'
+gem "algoliasearch-rails"
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'

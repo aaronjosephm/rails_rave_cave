@@ -4,6 +4,12 @@ class WarehousesController < ApplicationController
 
   def index
     @warehouses = policy_scope(Warehouse)
+
+    if params[:query].present?
+      @warehouses = Warehouse.search(params[:query])
+    else
+      @warehouses = Warehouse.all
+    end
   end
 
   def show
