@@ -2,24 +2,35 @@
 <div class="show-warehouse-banner">
   <img src=<%= "#{@warehouse.photo}" %> style="width: 100vw; height: auto;">
  <!--  <h2>current bookings:</h2>
-  <% @warehouse.bookings.each do |booking| %>
-    <%= booking.user.email %>
-    <%= booking.date %>
-  <% end %> -->
-  <div class="booking-button">
-    <h1><%= link_to "Book it!", new_warehouse_booking_url(@warehouse), method: :get, class: "btn-xlarge" %></h1>
-  </div>
+  <%# @warehouse.bookings.each do |booking| %>
+    <%# booking.user.email %>
+    <%# booking.date %>
+  <%# end %> -->
+
 </div>
-<div class="container">
-  <h1><%= @warehouse.name %></h1>
-  <h2>Description: <%= @warehouse.description %></h2>
-  <h2><%= @warehouse.price %></h2>
-  <div
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @marker.to_json %>"
-  ></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 ">
+      <div class="flex flex-column flex-align-center margin-top-5">
+        <h1><%= @warehouse.name %></h1>
+        <h2>Description: <%= @warehouse.description %></h2>
+        <h2><%= @warehouse.price %></h2>
+        <%= link_to "Book it!", new_warehouse_booking_url(@warehouse), method: :get, class: "btn-xlarge" %>
+      </div>
+    </div>
+
+
+    <div class="col-xs-12 col-sm-6">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 600px;"
+        data-markers="<%= @marker.to_json %>"
+      ></div>
+    </div>
+  </div>
+
+
   <h1><%= link_to  profile_url, method: :get do %>
   <i class="fas fa-hand-point-left"></i>
   <% end %></h1>
