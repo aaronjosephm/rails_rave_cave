@@ -45,8 +45,8 @@
           </div>
           <div class="card-footer">
             <h1><%= warehouse.name %></h1>
-            <p><%= warehouse.description %></p>
-            <h2><%= warehouse.price %></h2>
+            <p><%= warehouse.subtitle %></p>
+            <h1><%= warehouse.price %></h1>
             <% if policy(warehouse).destroy? %>
               <%= link_to warehouse_url(warehouse), method: :delete do %>
                 <i class="fas fa-trash-alt"></i>

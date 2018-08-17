@@ -92,8 +92,16 @@
 }
 
 .card i {
+  padding: 1vw;
   color: black;
+  font-size: 15px;
 }
+
+.card:hover i {
+  color: white;
+  font-size: 15px;
+}
+
 
 
 .card-body {
@@ -129,7 +137,7 @@
 
 
 .card i:hover {
-  color: white !important;
+  color: red !important;
 }
 
 .card img {
