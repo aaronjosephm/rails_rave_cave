@@ -9,8 +9,30 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "snackbar";
+@import "snackbar-material";
 
 // Your CSS partials
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+.snackbar.error {
+  background-color: red;
+}
+.snackbar.alert {
+  background-color: yellow;
+  color: black;
+  margin: auto
+}
+.snackbar.notice {
+  background-color: green;
+}
+
+#snackbar-container {
+  text-align: center;
+  width: 100%;
+  margin-left: 29vw;
+  margin-bottom: 70vh;
+}

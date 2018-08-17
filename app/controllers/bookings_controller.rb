@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
   end
 
   def sent
+    @just_created = params[:just_created]
     @user = current_user
     @bookings = @user.bookings
     authorize @bookings
@@ -29,10 +30,10 @@ class BookingsController < ApplicationController
     @booking.user = User.find(current_user[:id])
     @booking.warehouse = Warehouse.find(params[:warehouse_id])
     if @booking.save
-      redirect_to warehouse_path(@booking.warehouse)
+      redirect_to bookings_sent_url(just_created: true)
     else
       @warehouse = Warehouse.find(params[:warehouse_id])
-      redirect_to warehouse_path(@booking.warehouse)
+      redirect_to warehouse_path(@booking.warehouse, just_created: true)
     end
   end
 
