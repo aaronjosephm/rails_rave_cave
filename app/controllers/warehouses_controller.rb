@@ -31,7 +31,7 @@ class WarehousesController < ApplicationController
     authorize @warehouse
     @warehouse.user_id = current_user[:id]
     if @warehouse.save
-      redirect_to profile_url
+      redirect_to profile_warehouses_url
     else
 
       render :new
