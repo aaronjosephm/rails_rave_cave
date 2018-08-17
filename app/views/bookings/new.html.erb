@@ -1,9 +1,13 @@
 <h1>Create a new booking</h1>
 <div class="container">
-  <%= simple_form_for([@warehouse, @booking]) do |f| %>
-    <%= f.input :date %>
-    <%= f.input :event_name %>
-    <%= f.label :price %>
-    <%= f.submit "submit", class: "btn btn-primary" %>
-  <% end %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+     <%= simple_form_for([@warehouse, @booking]) do |f| %>
+      <%= f.input :date %>
+      <%= f.input :event_name %>
+      <h1> Price: <%= @warehouse.price %></h1>
+      <%= f.submit "SUBMIT", class: "btn btn-primary btn-lg btn-block" %>
+    <% end %>
+    </div>
+  </div>
 </div>
