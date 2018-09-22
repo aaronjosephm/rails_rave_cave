@@ -1,17 +1,17 @@
 class Warehouse < ApplicationRecord
-  include AlgoliaSearch
+  # include AlgoliaSearch
 
-  algoliasearch do
-    attribute :name, :address, :description
+  # algoliasearch do
+  #   attribute :name, :address, :description
 
-    searchableAttributes ['name', 'address', 'unordered(description)']
+  #   searchableAttributes ['name', 'address', 'unordered(description)']
 
-    # the `customRanking` setting defines the ranking criteria use to compare two matching
-    # records in case their text-relevance is equal. It should reflect your record popularity.
-    customRanking ['desc(likes_count)']
-  end
+  #   # the `customRanking` setting defines the ranking criteria use to compare two matching
+  #   # records in case their text-relevance is equal. It should reflect your record popularity.
+  #   customRanking ['desc(likes_count)']
+  # end
 
-  after_save :reindex
+
   has_many :bookings
   belongs_to :user
   geocoded_by :address
@@ -27,9 +27,5 @@ class Warehouse < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  private
 
-  def reindex
-    Warehouse.reindex
-  end
 end

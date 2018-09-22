@@ -11,7 +11,7 @@ gem 'devise'
 gem 'pundit'
 gem 'geocoder'
 gem 'cloudinary'
-gem "algoliasearch-rails"
+# gem "algoliasearch-rails"
 gem 'snackbarjs-rails'
 gem 'jquery-rails'
 
